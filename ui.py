@@ -1,8 +1,7 @@
 import pygame
-#from pygame import *
 pygame.init()
 
-screen = pygame.display.set_mode(size=(720,720))
+screen = pygame.display.set_mode(size=(720,720))   
 pygame.display.set_caption("Sudoku")
 
 blockSize = 80
@@ -13,7 +12,7 @@ def drawGrid():
             rect = pygame.Rect(x*blockSize, y*blockSize,blockSize, blockSize)
             pygame.draw.rect(screen, (0, 0, 0), rect, 2)
 
-screen.fill((250,250,250))
+screen.fill((250,250,250)) #rgb code for white
 drawGrid()
 
 grid = [[0 for x in range(9)] for y in range(9)]
@@ -33,13 +32,14 @@ while running:
                 positiony -= 1
             if position[0] % 80 == 0:
                 positionx -= 1
-
+        
+        #Checks for keypress and adds the text to the screen
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_1:
                 num = 1
                 grid[positiony][positionx] = num
                 font = pygame.font.SysFont('Comic Sans MS', 40)
-                fontsurf = font.render(str(num), False, (0, 0, 0), (250, 250, 250))
+                fontsurf = font.render(str(num), False, (0, 0, 0), (250, 250, 250))  #font.render(text, alias, text_colour, foreground_colour)
                 screen.blit(fontsurf, (20+positionx*80,20+positiony*80))
 
             if event.key == pygame.K_2:
