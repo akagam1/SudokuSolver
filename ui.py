@@ -7,8 +7,8 @@ pygame.display.set_caption("Sudoku")
 blockSize = 80
 def drawGrid():
     global blockSize #Set the size of the grid block
-    for x in range(720):
-        for y in range(720):
+    for x in range(9):
+        for y in range(9):
             rect = pygame.Rect(x*blockSize, y*blockSize,blockSize, blockSize)
             pygame.draw.rect(screen, (0, 0, 0), rect, 2)
 
