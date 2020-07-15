@@ -108,9 +108,9 @@ while running:
             if event.key == pygame.K_BACKSPACE:
                 num = " "
                 grid[positiony][positionx] = num
-                font = pygame.font.SysFont('Comic Sans MS', 60)
+                font = pygame.font.SysFont('Comic Sans MS', 80)
                 fontsurf = font.render(str(num), False, (0, 0, 0), (250, 250, 250))
-                screen.blit(fontsurf, (18+positionx*80,18+positiony*80))
+                screen.blit(fontsurf, (20+positionx*80,20+positiony*80))
 
             if event.key == pygame.K_SPACE:
                 solution(grid)
