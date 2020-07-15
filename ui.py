@@ -10,7 +10,7 @@ def drawGrid():
     for y in range(9):
         for x in range(9):
 
-            #conditions for red and black boxes for alternate 3x3 gr
+            #conditions for red and black boxes for alternate 3x3 grid
             if (((x>=0 and x<=2) and (y>=0 and y<=2)) or ((x>=6 and x<=8) and (y>=0 and y<=2)) or((x>=3 and x<=5) and(y>=3 and y<=5))
                     or ((x>=0 and x<=2) and (y>=6 and y<=8)) or ((x>=6 and x<=8) and (y>=6 and y<=8))):
             
