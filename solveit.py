@@ -1,4 +1,8 @@
 #define solve function that calls upon other functions
+import pygame
+from ui import *
+import time
+
 def solution(board):
 	void = find_void(board)
 	if not void:
@@ -9,11 +13,21 @@ def solution(board):
 	for i in range(1,10):
 		if valid(board,i,(row,column)):
 			board[row][column] = i
-			
+			numDisplay = font.render(str(i), False, (0, 0, 0), (250, 250, 250))
+			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
+			pygame.display.update()
+			time.sleep(0.05)
+
 			if solution(board):
 				return True
 			
 			board[row][column] = 0
+			numDisplay = blank.render("", False, (0, 0, 0), (250, 250, 250))
+			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
+			pygame.display.update()
+			time.sleep(0.05)
+
+
 	return False
 
 #define function that finds empty spaces(**i=row and j=column**)
