@@ -110,6 +110,10 @@ if __name__ == "__main__":
 
                 if event.key == pygame.K_SPACE:
                     solution(grid)
+                    for y in range(9):
+                        for x in range(9):
+                            numDisplay = font.render(str(grid[y][x]), False, (0, 0, 0), (250, 250, 250))
+                            screen.blit(numDisplay, (20 + x * 80, 20 + y * 80))
 
             if event.type == pygame.QUIT:
                 running = False

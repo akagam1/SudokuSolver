@@ -15,18 +15,18 @@ def solution(board):
 			board[row][column] = i
 
 			#Update the board immediately with valid number
-			numDisplay = font.render(str(i), False, (0, 0, 0), (250, 250, 250))
+			"""numDisplay = font.render(str(i), False, (0, 0, 0), (250, 250, 250))
 			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
-			pygame.display.update()
+			pygame.display.update()"""
 
 
 			if solution(board):
 				return True
 			
 			board[row][column] = 0
-			numDisplay = blank.render("", False, (0, 0, 0), (250, 250, 250))
+			"""numDisplay = blank.render("", False, (0, 0, 0), (250, 250, 250))
 			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
-			pygame.display.update()
+			pygame.display.update()"""
 
 
 	return False
