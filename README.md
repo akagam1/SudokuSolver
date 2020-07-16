@@ -8,8 +8,6 @@ value of a tile, click on the tile and enter the new number.
 
 To solve the board click backspace.
 
-Also note: It might take a few seconds to enter the first digit, but after that it will run smoothly
-
 ## Changes in the UI: 
 If you want to run the program and see the backtracking algorithm in action comment out lines 114-116 in ui.py file and un-comment lines 18-20 and 27-29 in the file
 solveit.py
