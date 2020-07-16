@@ -1,8 +1,8 @@
-#define solve function that calls upon other functions
 import pygame
 from ui import *
 import time
 
+#define solve function that calls upon other functions
 def solution(board):
 	void = find_void(board)
 	if not void:
@@ -18,7 +18,7 @@ def solution(board):
 			numDisplay = font.render(str(i), False, (0, 0, 0), (250, 250, 250))
 			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
 			pygame.display.update()
-			time.sleep(0.05)
+
 
 			if solution(board):
 				return True
@@ -27,7 +27,6 @@ def solution(board):
 			numDisplay = blank.render("", False, (0, 0, 0), (250, 250, 250))
 			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
 			pygame.display.update()
-			time.sleep(0.05)
 
 
 	return False
