@@ -13,6 +13,8 @@ def solution(board):
 	for i in range(1,10):
 		if valid(board,i,(row,column)):
 			board[row][column] = i
+
+			#Update the board immediately with valid number
 			numDisplay = font.render(str(i), False, (0, 0, 0), (250, 250, 250))
 			screen.blit(numDisplay, (20 + column * 80, 20 + row * 80))
 			pygame.display.update()
