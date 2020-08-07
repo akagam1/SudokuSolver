@@ -1,5 +1,5 @@
-# SudokuSolver
-solves any given sudoku board. 
+# Sudoku Solver
+Solves any given sudoku board. 
 
 To start, simply run the file ui.py
 
